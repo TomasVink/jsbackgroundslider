@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'OstrichSansRoundedMedium';
+    src: url('ostrich-rounded.eot');
+    src: url('ostrich-rounded.eot') format('embedded-opentype'),
+         url('ostrich-rounded.woff') format('woff'),
+         url('ostrich-rounded.ttf') format('truetype'),
+         url('ostrich-rounded.svg#OstrichSansRoundedMedium') format('svg');
+}
+html {
+	height: 100%;
+}
+body {
+	min-height: 100%;
+	font-size: 16px;
+	color: rgba(100,100,100,1);
+}
+h1 {
+	font-family: 'OstrichSansRoundedMedium', Helvetica, Arial, Sans-Serif;
+	font-size: 3.5em;
+	line-height: 1.2em;
+	letter-spacing: 1px;
+	font-weight: 300;
+	color: rgba(100,100,100,1);
+}
+p {
+	font-family: Helvetica, Arial, Sans-Serif;
+	font-size: 1em;
+	letter-spacing: 1px;
+	line-height: 1.5em;
+	font-weight: 300;
+	margin: 2em 0;
+}
+#bg {
+	/* set first background image! */
+	background-image: url('img/slide1.jpg');
+	position: absolute;
+	min-width: 100%;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center;
+}
+#overlay {
+	position: absolute;
+	background-color: rgba(255,255,255,0.85);
+	z-index: 99;
+	text-align: left;
+	padding: 40px 50px;
+}
+.center {
+	text-align: center;
+}
+
+/* Smartphones ----------- */
+@media only screen 
+and (max-width : 767px) {
+	#bg {
+		/* set height of background slider */
+		height: 50%;
+	}
+	#overlay {
+		margin: 0;
+		left: 0;
+		width: auto;
+		top: 50%; /* set same value as height of #bg */
+		height: auto; /* use height: auto; to make it adjust to its contents */
+	}
+}
+
+/* Tablet ----------- */
+@media only screen 
+and (min-width : 768px)
+and (max-width : 1023px) {
+	#bg {
+		height: 100%;
+	}
+	#overlay {
+		/* set height and width of overlay element */
+		width: 700px;
+		height: 380px;
+		top: 50%;
+		margin-top: -230px; /* divide height by 2 */
+		left: 50%;
+		margin-left: -400px; /*divide width by 2 */
+	}
+}
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1024px) {
+	#bg {
+		height: 100%;
+	}
+	#overlay {
+		/* set height and width of overlay element */
+		width: 700px;
+		height: 380px;
+		top: 50%;
+		margin-top: -230px; /* divide height by 2 */
+		left: 50%;
+		margin-left: -400px; /* divide width by 2 */
+	}
+}
+
